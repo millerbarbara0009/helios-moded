@@ -270,7 +270,8 @@ class MirrorListener:
             msg += f'\n<b>Total Files: </b>{count}'
             if typ != 0:
                 msg += f'\n<b>➜Corrupted Files: </b>{typ}'
-            msg += f'\n<b>➜Request By: </b>{self.tag}\n'
+                msg += f'\n<b>➜Request By:</b> ️{download.message.from_user.first_name}'
+            msg += f'\n\n<b>➜User Name: </b>{self.tag}\n'
             if BOT_PM:
                 message = sendMessage(msg + pmwarn + warnmsg, self.bot, self.update)
                 Thread(target=auto_delete_upload_message, args=(bot, self.message, message)).start()
