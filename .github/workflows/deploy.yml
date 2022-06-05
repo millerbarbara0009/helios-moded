@@ -10,8 +10,8 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: 5b97d724-9892-4d56-91b8-f532327ff463
-          heroku_app_name: snax90tuy
-          heroku_email: zheqqqwkvenfwon@scpulse.com
+          heroku_app_name: snx00003
+          heroku_email: 5e1085a9-b8f9-4e25-a24b-2513ea778b23
           usedocker: true
           docker_heroku_process_type: web
           stack: "container"
