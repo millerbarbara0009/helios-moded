@@ -150,7 +150,8 @@ def get_readable_message():
                     msg += f"\n\n<b>➜Seeders:</b> {download.torrent_info().num_seeds}" \
                            f" \n\n<b>➜Leechers:</b> {download.torrent_info().num_leechs}"
                 except:
-                    passif download.message.chat.type != 'private':
+                    pass
+                if download.message.chat.type != 'private':
 
                     try:
 
