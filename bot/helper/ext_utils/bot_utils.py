@@ -150,7 +150,17 @@ def get_readable_message():
                     msg += f"\n\n<b>➜Seeders:</b> {download.torrent_info().num_seeds}" \
                            f" \n\n<b>➜Leechers:</b> {download.torrent_info().num_leechs}"
                 except:
-                    pass
+                    passif download.message.chat.type != 'private':
+
+                    try:
+
+                        chatid = str(download.message.chat.id)[4:]
+
+                        msg += f'\n<b>Source Msg: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">Click Here</a>'
+
+                    except:
+
+                        pass
                 msg += f'\n\n<b>➜Request By:</b> ️{download.message.from_user.first_name}'
                 msg += f"\n\n<b>➜To Stop:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
