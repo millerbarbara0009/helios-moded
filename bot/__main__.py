@@ -59,7 +59,7 @@ def stats(update, context):
 def start(update, context):
     buttons = ButtonMaker()
 
-    buttons.buildbutton("Mirror Group", "https://t.me/samc_z")
+    buttons.buildbutton("Mirror Group", "https://t.me/+MNZhG06AN5ExMjM1")
     uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
