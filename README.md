@@ -1,3 +1,5 @@
+ssh snx@20.210.126.14
+
 #frist command
 ```
 wget https://github.com/ghostmirrorlab/scripts/raw/main/docker.sh
