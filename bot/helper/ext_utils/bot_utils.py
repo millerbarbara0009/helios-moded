@@ -163,8 +163,6 @@ def get_readable_message():
 
                         pass
                  
-                 if download.message.chat.type != 'private':
-
                     try:
 
                         user = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
