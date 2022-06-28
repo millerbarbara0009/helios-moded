@@ -157,7 +157,7 @@ def get_readable_message():
 
                         chatid = str(download.message.chat.id)[4:]
 
-                        msg += f'\n<b>Source Msg: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">Click Here</a>'
+                        msg += f'\n\n<b>➜Source Msg: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">Click Here</a>'
 
                     except:
 
