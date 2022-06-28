@@ -116,7 +116,6 @@ rss_dict = {}
 AUTHORIZED_CHATS = set()
 SUDO_USERS = set()
 MOD_USERS = set()
-EXTENTION_FILTER = set(['.torrent'])
 AS_DOC_USERS = set()
 AS_MEDIA_USERS = set()
 MIRROR_LOGS = set()
@@ -161,14 +160,6 @@ try:
     schats = schats.split(" ")
     for chats in schats:
         MOD_USERS.add(int(chats))
-except:
-    pass
-try:
-    fx = getConfig('EXTENTION_FILTER')
-    if len(fx) > 0:
-        fx = fx.split(' ')
-        for x in fx:
-            EXTENTION_FILTER.add(x.lower())
 except:
     pass
 
