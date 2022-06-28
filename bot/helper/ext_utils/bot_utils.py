@@ -162,6 +162,18 @@ def get_readable_message():
                     except:
 
                         pass
+                 
+                 if download.message.chat.type != 'private':
+
+                    try:
+
+                        user = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
+
+                        msg += f'\n\n<b>➜Request By: </b> {user}'
+
+                    except:
+
+                        pass
                 msg += f'\n\n<b>➜Request By:</b> ️{download.message.from_user.first_name}'
                 msg += f"\n\n<b>➜To Stop:</b> <code>/{BotCommands.CancelMirror} {download.gid()}</code>"
             elif download.status() == MirrorStatus.STATUS_SEEDING:
