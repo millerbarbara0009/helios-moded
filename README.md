@@ -1,4 +1,4 @@
-ssh snx@20.210.126.14
+ssh -i snx snx@20.210.213.149
 
 #frist command
 ```
